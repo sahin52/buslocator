@@ -4,7 +4,7 @@
 import dynamic from "next/dynamic";
 import { useEffect, useState, useRef } from "react";
 import "leaflet/dist/leaflet.css";
-import L, { Map as LeafletMap, Icon } from "leaflet";
+import L, { Map as LeafletMap, Icon, DivIcon } from "leaflet";
 import { Polyline } from "react-leaflet";
 
 const MapContainer = dynamic(
