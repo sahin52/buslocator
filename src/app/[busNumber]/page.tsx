@@ -54,7 +54,7 @@ const BusPage = ({ params }: Props) => {
   return (
     <div>
       <h1>Otobüs {busNumber} Konumları</h1>
-      <Map busLocations={busLocations} />
+      <Map />
     </div>
   );
 };

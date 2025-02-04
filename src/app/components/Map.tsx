@@ -39,7 +39,6 @@ interface RoutePoint {
 const LiveBusMap: React.FC = () => {
   const [busStops, setBusStops] = useState<BusStop[]>([]);
   const [busIcon, setBusIcon] = useState<Icon | DivIcon | undefined>(undefined);
-  const [favoriteStops, setFavoriteStops] = useState<number[]>([]);
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [filteredStops, setFilteredStops] = useState<BusStop[]>([]);
   const [route, setRoute] = useState<[number, number][]>([]);
@@ -55,10 +54,6 @@ const LiveBusMap: React.FC = () => {
 
     setBusIcon(busMarkerIcon);
 
-    const savedFavorites = JSON.parse(
-      localStorage.getItem("favoriteStops") || "[]"
-    );
-    setFavoriteStops(savedFavorites);
 
     const fetchBusStops = async () => {
       try {

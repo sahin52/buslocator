@@ -14,6 +14,7 @@ export async function GET(request: Request) {
     const data = await response.json();
     return Response.json(data);
   } catch (error) {
+    console.error("API hatası:", error);
     return new Response("API hatası", { status: 500 });
   }
 }

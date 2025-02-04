@@ -1,4 +1,4 @@
-import LiveBusMap from "@/components/LiveBusMap";
+import LiveBusMap from "./Map";
 
 export default function LiveBusPage() {
   return (
